@@ -86,10 +86,6 @@ export const NavLink = styled(Link)`
   @media (max-width: 640px) {
     border-top: 1px solid ${Colors.fontBaseColor};
     font-size: 3rem;
-
-    &.active {
-    color: white;
-  }
   }
 `;
 
