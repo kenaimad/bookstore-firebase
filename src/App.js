@@ -3,6 +3,7 @@ import Navbar from './components/layout/Navbar/Navbar';
 import CatalogPage from './components/pages/CatalogPage/CatalogPage';
 import HomePage from './components/pages/HomePage/HomePage';
 import CartPage from './components/pages/CartPage/CartPage';
+import Footer from './components/layout/Footer/Footer';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/cart" element={<CartPage />} />
         </Routes>
       </div>
+      <Footer />
     </Router>
   );
 }

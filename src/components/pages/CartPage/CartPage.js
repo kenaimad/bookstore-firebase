@@ -1,5 +1,7 @@
+import * as s from "./CartPage.styled";
+
 const CartPage = () => {
-    return <div>CartPage</div>;
+    return <s.MainContainer>CartPage</s.MainContainer>;
 }
 
 export default CartPage;
