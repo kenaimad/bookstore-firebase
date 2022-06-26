@@ -6,7 +6,7 @@ export const BookContainer = styled.div`
   align-items: center;
   justify-content: center;
   border: 1px solid black;
-  height: 40vh;
+  height: 35vh;
   margin: 1rem;
 `;
 

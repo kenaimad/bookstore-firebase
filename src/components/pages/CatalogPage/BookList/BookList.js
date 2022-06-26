@@ -1,13 +1,33 @@
 import { useState, useEffect } from 'react';
-import * as API from "../../../../api/API";
+import * as API from '../../../../api/API';
 import * as s from './BookList.styled';
 import Book from './Book/Book';
+import ReactPaginate from 'react-paginate';
 
 const BookList = () => {
-  const [books, setBooks] = useState([{
-    id: "",
-    title: ""
-  }]);
+  const [books, setBooks] = useState([]);
+  const [pageNumber, setPageNumber] = useState(0);
+
+  const booksPerPage = 6;
+  const pagesVisited = pageNumber * booksPerPage;
+  const pageCount = Math.ceil(books.length / booksPerPage);
+
+  const displayBooks = books
+    .slice(pagesVisited, pagesVisited + booksPerPage)
+    .map((book) => (
+      <Book
+        key={book.id}
+        id={book.id}
+        title={book.title}
+        author={book.author}
+        photo={book.photo}
+        price={book.price}
+      />
+    ));
+
+  const changePage = ({ selected }) => {
+    setPageNumber(selected);
+  };
 
   const getBooks = () => {
     API.getBooks().then((data) => {
@@ -20,11 +40,19 @@ const BookList = () => {
     getBooks();
   }, []);
 
-  return <s.BooksList>
-    {books.map((book) => (
-        <Book key={book.id} id={book.id} title={book.title} author={book.author} photo={book.photo} price={book.price}/>
-    ))}
-  </s.BooksList>;
+  return (
+    <s.BooksList>
+      <s.CatalogContainer>{displayBooks}</s.CatalogContainer>
+      <s.PaginationContainer>
+        <ReactPaginate
+          previousLabel={'<'}
+          nextLabel={'>'}
+          pageCount={pageCount}
+          onPageChange={changePage}
+        />
+      </s.PaginationContainer>
+    </s.BooksList>
+  );
 };
 
 export default BookList;
