@@ -1,7 +1,12 @@
-import * as s from "./CartPage.styled";
+import Cart from './Cart/Cart';
+import { Wrapper } from './CartPage.styled';
 
 const CartPage = () => {
-    return <s.MainContainer>CartPage</s.MainContainer>;
-}
+  return (
+    <Wrapper>
+      <Cart />
+    </Wrapper>
+  );
+};
 
 export default CartPage;

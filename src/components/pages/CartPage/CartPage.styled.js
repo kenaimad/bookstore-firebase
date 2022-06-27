@@ -1,5 +1,11 @@
 import styled from 'styled-components';
 
-export const MainContainer = styled.section`
-    min-height: 85vh;
+export const Wrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    overflow-y: auto;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
 `
