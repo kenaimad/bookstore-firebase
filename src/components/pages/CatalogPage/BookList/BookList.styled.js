@@ -1,4 +1,6 @@
+import ReactPaginate from 'react-paginate';
 import styled from 'styled-components';
+import { Colors } from '../../../../utils/Colors';
 
 export const BooksList = styled.div`
   display: flex;
@@ -12,21 +14,38 @@ export const CatalogContainer = styled.div`
   width: 100%;
   background-color: white;
   flex-wrap: wrap;
-`
-export const PaginationContainer = styled.div`
-    display: flex;
-    width: 100%;
-    height: 5rem;
-    justify-content: center;
-    align-items: center;
+`;
 
-    ul {
-        text-decoration: none;
+export const Pagination = styled(ReactPaginate)`
+  display: flex;
+  width: 100%;
+  height: 5rem;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
 
-        li {
-            display: inline;
-            margin: 1rem;
-        }
+  .previous,
+  .next {
+    border: 1px solid black;
+    width: 30px;
+    text-align: center;
+    background-color: ${Colors.primaryBackground};
+  }
+
+  .selected {
+    text-decoration: underline;
+  }
+
+  .disabled {
+    background-color: ${Colors.disabledElement};
+  }
+
+  li {
+    display: inline;
+    margin: .5rem;
+
+    a {
+      color: ${Colors.fontBaseColor};
     }
-
-`
+  }
+`;

@@ -6,17 +6,19 @@ export const BookContainer = styled.div`
   align-items: center;
   justify-content: center;
   border: 1px solid black;
-  height: 35vh;
+  height: 50vh;
   margin: 1rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 export const CoverContainer = styled.div`
-  max-height: 100%;
-  width: 40%;
+  height: 100%;
 
   img {
-    max-width: 100%;
-    max-height: 100%;
+    height: 100%;
   }
 `;
 

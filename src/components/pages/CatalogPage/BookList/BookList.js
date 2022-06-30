@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import * as API from '../../../../api/API';
 import * as s from './BookList.styled';
 import Book from './Book/Book';
-import ReactPaginate from 'react-paginate';
 
 const BookList = () => {
   const [books, setBooks] = useState([]);
@@ -43,14 +42,12 @@ const BookList = () => {
   return (
     <s.BooksList>
       <s.CatalogContainer>{displayBooks}</s.CatalogContainer>
-      <s.PaginationContainer>
-        <ReactPaginate
+        <s.Pagination
           previousLabel={'<'}
           nextLabel={'>'}
           pageCount={pageCount}
           onPageChange={changePage}
         />
-      </s.PaginationContainer>
     </s.BooksList>
   );
 };
