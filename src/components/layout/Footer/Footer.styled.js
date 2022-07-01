@@ -4,7 +4,7 @@ import { Colors } from '../../../utils/Colors';
 export const FooterContainer = styled.section`
   display: flex;
   width: 100%;
-  height: 6rem;
+  height: 7vh;
   background-color: ${Colors.primaryBackground};
   border-top: 1px solid ${Colors.fontBaseColor};
   justify-content: center;

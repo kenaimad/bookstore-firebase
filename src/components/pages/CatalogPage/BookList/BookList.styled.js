@@ -11,6 +11,7 @@ export const BooksList = styled.div`
 export const CatalogContainer = styled.div`
   display: flex;
   justify-content: space-around;
+  align-content: center;
   width: 100%;
   background-color: white;
   flex-wrap: wrap;
@@ -36,8 +37,12 @@ export const Pagination = styled(ReactPaginate)`
     text-decoration: underline;
   }
 
-  .disabled {
+  .disabled{
     background-color: ${Colors.disabledElement};
+
+    a {
+      cursor: default;
+    }
   }
 
   li {
@@ -46,6 +51,7 @@ export const Pagination = styled(ReactPaginate)`
 
     a {
       color: ${Colors.fontBaseColor};
+      cursor: pointer;
     }
   }
 `;
