@@ -23,7 +23,6 @@ const Book = (props) => {
       <h1>{props.title}</h1>
       <h2>Cena: {props.price} zł</h2>
       <s.AddButton onClick={addItemHandler}>Do koszyka {'>'}</s.AddButton>
-
     </s.BookContainer>
   );
 };

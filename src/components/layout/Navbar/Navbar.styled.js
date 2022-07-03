@@ -29,7 +29,7 @@ export const NavListContainer = styled.div`
   justify-self: flex-end;
   display: flex;
   height: 100%;
-  width: 60%;
+  width: 40%;
 
   @media (max-width: 640px) {
     flex-flow: column nowrap;

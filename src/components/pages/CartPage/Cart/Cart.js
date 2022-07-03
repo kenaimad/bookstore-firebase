@@ -13,21 +13,21 @@ import EmptyCart from './CartSummary/EmptyCart';
 import OrderForm from './OrderForm/OrderForm';
 
 const Cart = (props) => {
-  const cartCtx = useContext(CartContext);
+  const cartContext = useContext(CartContext);
 
   const cartItemRemoveHandler = (id) => {
-    cartCtx.removeItem(id);
+    cartContext.removeItem(id);
   };
 
   const cartAddItemHandler = (item) => {
-    cartCtx.addItem(item);
+    cartContext.addItem(item);
   };
 
   return (
     <Wrapper>
       <CartItemsContainer>
         <StyledTitle>Your Cart</StyledTitle>
-        {cartCtx.items.map((book) => (
+        {cartContext.items.map((book) => (
           <CartItem
             key={book.id}
             id={book.id}
@@ -43,10 +43,9 @@ const Cart = (props) => {
         ))}
       </CartItemsContainer>
       <SummaryContainer>
-        {cartCtx.quantity !== 0 && <CartSummary />}
-        {cartCtx.quantity !== 0 && <OrderForm />}
-
-        {cartCtx.quantity === 0 && <EmptyCart />}
+        {cartContext.quantity !== 0 && <CartSummary />}
+        {cartContext.quantity !== 0 && <OrderForm />}
+        {cartContext.quantity === 0 && <EmptyCart />}
       </SummaryContainer>
     </Wrapper>
   );

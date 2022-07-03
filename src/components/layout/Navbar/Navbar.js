@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import CartButton from './CartButton/CartButton';
 import * as s from './Navbar.styled';
 
 const Navbar = () => {
@@ -21,13 +22,10 @@ const Navbar = () => {
       </s.LogoContainer>
       <s.NavListContainer open={isOpen} onClick={closeMenuAfterClick}>
         <s.ListElement>
-          <s.NavLink to="/">HomePage</s.NavLink>
-        </s.ListElement>
-        <s.ListElement>
           <s.NavLink to="/catalog">Catalog</s.NavLink>
         </s.ListElement>
         <s.ListElement>
-          <s.NavLink to="/cart">Cart</s.NavLink>
+          <s.NavLink to="/cart"><CartButton /></s.NavLink>
         </s.ListElement>
       </s.NavListContainer>
       <s.IconContainer>
