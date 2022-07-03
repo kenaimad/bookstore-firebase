@@ -7,7 +7,7 @@ const BookList = () => {
   const [books, setBooks] = useState([]);
   const [pageNumber, setPageNumber] = useState(0);
 
-  const booksPerPage = 6;
+  const booksPerPage = 8;
   const pagesVisited = pageNumber * booksPerPage;
   const pageCount = Math.ceil(books.length / booksPerPage);
 

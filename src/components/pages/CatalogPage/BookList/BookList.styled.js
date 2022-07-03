@@ -10,7 +10,7 @@ export const BooksList = styled.div`
 
 export const CatalogContainer = styled.div`
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-content: center;
   width: 100%;
   background-color: white;
