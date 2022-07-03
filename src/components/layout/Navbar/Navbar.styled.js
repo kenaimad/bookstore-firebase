@@ -37,9 +37,10 @@ export const NavListContainer = styled.div`
     transform: ${({ open }) => (open ? 'translateX(0)' : 'translateX(100%)')};
     top: 0;
     right: 0;
-    height: 90vh;
+    height: 100vh;
     width: 100vw;
-    margin-top: 6rem;
+    //margin-top: 6rem;
+    z-index: 10;
   }
 `;
 
