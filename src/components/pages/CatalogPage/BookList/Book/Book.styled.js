@@ -6,10 +6,18 @@ export const BookContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 350px;
-  max-width: 350px;
+  width: 20%;
+  min-width: 250px;
   height: 40vh;
   margin: 1rem;
+
+  @media (max-width: 1080px) {
+    width: 30%;
+  }
+
+  @media (max-width: 640px) {
+    width: 100%;
+  }
 
   h1 {
     font-size: .9rem;
