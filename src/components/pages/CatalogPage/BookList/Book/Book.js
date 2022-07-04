@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 import CartContext from '../../../../../store/cart-context';
 import * as s from './Book.styled';
+import AddToCartButton from './buttons/AddToCartButton';
 
 const Book = (props) => {
   const cartCtx = useContext(CartContext);
@@ -22,7 +23,7 @@ const Book = (props) => {
       <s.Cover src={props.photo} alt="Book cover" />
       <h1>{props.title}</h1>
       <h2>Cena: {props.price} zł</h2>
-      <s.AddButton onClick={addItemHandler}>Do koszyka {'>'}</s.AddButton>
+      <AddToCartButton onClick={addItemHandler}></AddToCartButton>
     </s.BookContainer>
   );
 };
