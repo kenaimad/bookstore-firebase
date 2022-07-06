@@ -9,7 +9,6 @@ export const getBooks = async () => {
     }
   
     const responseData = await response.json();
-    //console.log(responseData);
   
     const loadedBooks = [];
   
@@ -18,10 +17,9 @@ export const getBooks = async () => {
         id: key,
         title: responseData[key].title,
         author: responseData[key].author,
-        photo: responseData[key].cover,
+        cover: responseData[key].cover,
         price: responseData[key].price,
       });
     }
-    console.log(loadedBooks);
     return loadedBooks;
   };

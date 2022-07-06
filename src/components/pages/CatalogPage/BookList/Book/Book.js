@@ -14,13 +14,12 @@ const Book = (props) => {
       price: props.price,
       cover: props.cover,
       amount: 1,
-      
     });
   };
 
   return (
     <s.BookContainer>
-      <s.Cover src={props.photo} alt="Book cover" />
+      <s.Cover src={props.cover} alt="Book cover" />
       <h1>{props.title}</h1>
       <h2>Cena: {props.price} zł</h2>
       <AddToCartButton onClick={addItemHandler}></AddToCartButton>

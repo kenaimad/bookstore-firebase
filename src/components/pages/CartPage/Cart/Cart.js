@@ -2,7 +2,6 @@ import React, { useContext } from 'react';
 import CartContext from '../../../../store/cart-context';
 import {
   CartItemsContainer,
-  StyledTitle,
   SummaryContainer,
   Wrapper,
 } from './Cart.styled';
@@ -26,7 +25,6 @@ const Cart = (props) => {
   return (
     <Wrapper>
       <CartItemsContainer>
-        <StyledTitle>Your Cart</StyledTitle>
         {cartContext.items.map((book) => (
           <CartItem
             key={book.id}
@@ -35,7 +33,6 @@ const Cart = (props) => {
             author={book.author}
             price={book.price}
             cover={book.cover}
-            currency={book.currency}
             amount={book.amount}
             onRemove={cartItemRemoveHandler.bind(null, book.id)}
             onAdd={cartAddItemHandler.bind(null, book)}

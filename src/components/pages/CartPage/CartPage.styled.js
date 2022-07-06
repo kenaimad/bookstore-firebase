@@ -6,6 +6,5 @@ export const Wrapper = styled.div`
     align-items: center;
     align-content: center;
     overflow-y: auto;
-    margin-top: 5rem;
     margin-bottom: 2rem;
 `

@@ -19,7 +19,7 @@ const BookList = () => {
         id={book.id}
         title={book.title}
         author={book.author}
-        photo={book.photo}
+        cover={book.cover}
         price={book.price}
       />
     ));
@@ -31,7 +31,6 @@ const BookList = () => {
   const getBooks = () => {
     API.getBooks().then((data) => {
       setBooks(data);
-      //console.log(data);
     });
   };
 
