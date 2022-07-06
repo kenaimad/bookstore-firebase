@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Colors } from '../../../../../utils/Colors';
 
 export const Wrapper = styled.div`
   display: flex;
@@ -7,6 +8,7 @@ export const Wrapper = styled.div`
   width: 70vw;
   min-width: 270px;
   max-height: 50px;
+  color: ${Colors.primaryBackground};
 `;
 
 export const CoverLabel = styled.div`

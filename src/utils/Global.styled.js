@@ -4,7 +4,7 @@ import { createGlobalStyle } from 'styled-components';
 export default createGlobalStyle`
 * {
   font-family: sans-serif;
-  color: #4B300C;
+  color: ${Colors.primaryBackground};
 }
   body {
     margin: 0;

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Colors } from '../../../../../utils/Colors';
 
 export const Wrapper = styled.div`
   display: flex;
@@ -7,10 +8,10 @@ export const Wrapper = styled.div`
   width: 70vw;
   min-width: 270px;
   max-height: 120px;
-  border-top: 1px solid black;
+  border-top: 1px solid ${Colors.primaryBackground};
 
   &:last-child {
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid ${Colors.primaryBackground};
   }
 `;
 
@@ -63,7 +64,7 @@ export const QuantityContainer = styled.div`
   button {
     border: none;
     width: 30%;
-    background-color: orange;
+    background-color: ${Colors.primaryBackground};
     cursor: pointer;
   }
 `;
