@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
   align-items: center;
   width: 70vw;
   min-width: 270px;
-  max-height: 200px;
+  max-height: 120px;
   border-top: 1px solid black;
 
   &:last-child {
@@ -17,7 +17,7 @@ export const Wrapper = styled.div`
 export const CoverContainer = styled.div`
   display: flex;
   align-items: center;
-  height: 200px;
+  height: 120px;
   width: 150px;
   margin: 0 1rem;
 

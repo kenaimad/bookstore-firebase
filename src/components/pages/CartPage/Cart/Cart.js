@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import CartContext from '../../../../store/cart-context';
+import Labels from './Labels/Labels';
 import {
   CartItemsContainer,
   SummaryContainer,
@@ -25,6 +26,7 @@ const Cart = (props) => {
   return (
     <Wrapper>
       <CartItemsContainer>
+        <Labels />
         {cartContext.items.map((book) => (
           <CartItem
             key={book.id}
