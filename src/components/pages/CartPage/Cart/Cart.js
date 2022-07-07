@@ -1,11 +1,7 @@
 import React, { useContext } from 'react';
 import CartContext from '../../../../store/cart-context';
 import Labels from './Labels/Labels';
-import {
-  CartItemsContainer,
-  SummaryContainer,
-  Wrapper,
-} from './Cart.styled';
+import * as s from './Cart.styled';
 
 import CartItem from './CartItem/CartItem';
 import CartSummary from './CartSummary/CartSummary';
@@ -24,9 +20,9 @@ const Cart = (props) => {
   };
 
   return (
-    <Wrapper>
-      <CartItemsContainer>
-      {cartContext.quantity !== 0 && <Labels />}
+    <s.Wrapper>
+      <s.CartItemsContainer>
+        {cartContext.quantity !== 0 && <Labels />}
         {cartContext.items.map((book) => (
           <CartItem
             key={book.id}
@@ -40,13 +36,10 @@ const Cart = (props) => {
             onAdd={cartAddItemHandler.bind(null, book)}
           />
         ))}
-      </CartItemsContainer>
-      <SummaryContainer>
+      </s.CartItemsContainer>
         {cartContext.quantity !== 0 && <CartSummary />}
-        {cartContext.quantity !== 0 && <OrderForm />}
         {cartContext.quantity === 0 && <EmptyCart />}
-      </SummaryContainer>
-    </Wrapper>
+    </s.Wrapper>
   );
 };
 

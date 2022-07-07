@@ -8,10 +8,7 @@ import {
   const EmptyCart = () => {
     return (
       <Wrapper>
-        <DescriptionContainer>
-          <StyledP>Your cart is empty!</StyledP>
-        </DescriptionContainer>
-        <StyledButton>Go back to catalog</StyledButton>
+        <p>Cart is empty!</p>
       </Wrapper>
     );
   };

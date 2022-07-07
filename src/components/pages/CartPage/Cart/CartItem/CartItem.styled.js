@@ -59,6 +59,7 @@ export const QuantityContainer = styled.div`
   justify-content: space-between;
   height: 20%;
   width: 5%;
+  min-width: 50px;
   border: 1px solid black;
 
   button {

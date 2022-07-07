@@ -1,26 +1,24 @@
 import { useContext } from 'react';
 import CartContext from '../../../../../store/cart-context';
-import {
-  DescriptionContainer,
-  StyledDescription,
-  StyledP,
-  Wrapper,
-} from './CartSummary.styled';
+import * as s from './CartSummary.styled';
 
 const CartSummary = () => {
-  const cartCtx = useContext(CartContext);
+  const cartContext = useContext(CartContext);
 
   return (
     <>
-      <Wrapper>
-        <StyledP>Summary:</StyledP>
-        <DescriptionContainer>
-          <StyledDescription>
-            Total Price: {cartCtx.totalAmount} PLN
-          </StyledDescription>
-          <StyledDescription>Total items: {cartCtx.quantity}</StyledDescription>
-        </DescriptionContainer>
-      </Wrapper>
+      <s.Wrapper>
+        <s.InformationCaontainer>
+          {' '}
+          <h2>
+            Łączna wartość koszyka: {cartContext.totalAmount.toFixed(2)} zł.
+          </h2>
+        </s.InformationCaontainer>
+        <s.ButtonsContainer>
+          <button>Wstecz</button>
+          <button>Zamówienie {'>'}</button>
+        </s.ButtonsContainer>
+      </s.Wrapper>
     </>
   );
 };
