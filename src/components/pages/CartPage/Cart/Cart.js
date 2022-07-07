@@ -26,7 +26,7 @@ const Cart = (props) => {
   return (
     <Wrapper>
       <CartItemsContainer>
-        <Labels />
+      {cartContext.quantity !== 0 && <Labels />}
         {cartContext.items.map((book) => (
           <CartItem
             key={book.id}
