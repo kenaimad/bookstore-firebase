@@ -19,7 +19,7 @@ const CartItem = (props) => {
         <button onClick={props.onRemove}>-</button>
       </s.QuantityContainer>
       <s.PriceContainer>
-        <h1>{props.amount * props.price} zł</h1>
+        <s.MobileLabel>Łączna cena:</s.MobileLabel><h1>{props.amount * props.price} zł</h1>
       </s.PriceContainer>
       <s.removeContainer>
         <img src={require('./icons/delete-icon.png')} alt="Remove icon" />

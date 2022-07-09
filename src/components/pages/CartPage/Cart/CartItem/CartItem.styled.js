@@ -127,3 +127,10 @@ export const removeContainer = styled.div`
     margin-bottom: 1rem;
   }
 `;
+
+
+export const MobileLabel = styled.span`
+    @media (min-width: 600px) {
+    display: none;
+  }
+`
