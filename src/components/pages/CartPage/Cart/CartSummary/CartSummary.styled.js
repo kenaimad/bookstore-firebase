@@ -4,9 +4,10 @@ import { Colors } from '../../../../../utils/Colors';
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  width: 70vw;
+  width: 100%;
   justify-content: center;
   margin-top: 2rem;
+
 `;
 
 export const InformationCaontainer = styled.div`

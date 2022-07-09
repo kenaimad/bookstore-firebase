@@ -9,7 +9,7 @@ export const NavContainer = styled.div`
   width: 100%;
   border-top: 1px solid ${Colors.fontBaseColor};
   border-bottom: 1px solid ${Colors.fontBaseColor};
-  height: 7vh;
+  height: 4rem;
   background-color: ${Colors.primaryBackground};
 
   @media (max-width: 640px) {

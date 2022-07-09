@@ -7,4 +7,5 @@ export const Wrapper = styled.div`
     align-content: center;
     overflow-y: auto;
     margin-bottom: 2rem;
+    min-height: 83vh;
 `

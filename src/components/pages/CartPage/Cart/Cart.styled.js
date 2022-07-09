@@ -5,15 +5,17 @@ export const Wrapper = styled.div`
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
-  //justify-content: center;
   width: 80%;
-  height: 80vh;
   margin: 1rem;
   overflow-y: auto;
+
+  @media (max-width: 1200px) {
+    width: 100%;
+  }
 `;
 
 export const CartItemsContainer = styled.div`
-  //max-height: 50%;
+  width: 100%;
 `;
 
 export const SummaryContainer = styled.div`
@@ -25,9 +27,7 @@ export const SummaryContainer = styled.div`
   border: 1px solid #783937ff;
   background-color: #f7e3b7;
   overflow-y: auto;
-  @media (max-width: 768px) {
-    height: 600px;
-  }
+
 `;
 
 export const StyledTitle = styled.h2`
