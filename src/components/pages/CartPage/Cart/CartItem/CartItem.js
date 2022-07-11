@@ -22,7 +22,7 @@ const CartItem = (props) => {
         <s.MobileLabel>Łączna cena:</s.MobileLabel><h1>{props.amount * props.price} zł</h1>
       </s.PriceContainer>
       <s.removeContainer>
-        <img src={require('./icons/delete-icon.png')} alt="Remove icon" />
+        <img src={require('./icons/delete-icon.png')} onClick={props.onTotallyDeleteItem} alt="Remove icon" />
       </s.removeContainer>
     </s.Wrapper>
   );

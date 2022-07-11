@@ -15,6 +15,10 @@ const Cart = (props) => {
     cartContext.removeItem(id);
   };
 
+  const cartTotallyRemoveItemHandler = (id) => {
+    cartContext.totallyDeleteItem(id);
+  }
+
   const cartAddItemHandler = (item) => {
     cartContext.addItem(item);
   };
@@ -33,6 +37,7 @@ const Cart = (props) => {
             cover={book.cover}
             amount={book.amount}
             onRemove={cartItemRemoveHandler.bind(null, book.id)}
+            onTotallyDeleteItem={cartTotallyRemoveItemHandler.bind(null, book.id)}
             onAdd={cartAddItemHandler.bind(null, book)}
           />
         ))}
