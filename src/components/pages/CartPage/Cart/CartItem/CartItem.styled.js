@@ -120,6 +120,7 @@ export const removeContainer = styled.div`
   img {
     display: block;
     height: 30px;
+    cursor: pointer;
     //max-width: 50%
   }
 

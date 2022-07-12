@@ -6,7 +6,7 @@ import * as s from './Cart.styled';
 import CartItem from './CartItem/CartItem';
 import CartSummary from './CartSummary/CartSummary';
 import EmptyCart from './CartSummary/EmptyCart';
-import OrderForm from './OrderForm/OrderForm';
+import OrderForm from '../../OrderPage/OrderForm/OrderForm';
 
 const Cart = (props) => {
   const cartContext = useContext(CartContext);
